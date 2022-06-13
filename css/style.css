@@ -1,0 +1,145 @@
+/* ROOT CSS */
+
+.root {
+
+    --main-color: #04AA6D;
+    --color-dark: #1D2231;
+    --text-grey: #8390A2;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    width: 100%;
+    margin: 0;
+}
+
+header {
+    height: 40px;
+}
+
+brand {
+    display: flex;
+    margin-left: 10px;
+}
+
+brand img {
+    height: 60px;
+    margin: 2px;
+    padding: 2px;
+
+}
+
+nav {
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+
+nav .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f78080;
+    width: 100%;
+    height: 40px;
+    float: left;
+}
+
+ul {
+    overflow: hidden;
+    padding-left: 20px;
+    width: 100%;
+}
+
+li {
+    float: left;
+    padding-left: 2px;
+}
+
+li a{
+    display: block;
+    color: rgb(252, 249, 249);
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+
+main {
+    margin-top: 0rem;
+    padding: 1rem 0.5rem;
+    background: #f1f5f9;
+    width: 75%;
+    height: 100%
+    }
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 1rem;
+    max-width: 100%;
+
+}
+
+.cards {
+    display: inherit;
+    justify-content: space-between;
+    width: 150px;
+    height: 150px;
+}
+
+.cards .card-img {
+    display:flex;
+    position: relative;
+    align-items: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.cards .card-text {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    /* margin-left: 50px;
+    margin-right: 45px; */
+    color: black;
+}
+.cards .card-text:after {
+content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid #04AA6D;
+  margin-top: 10px;
+  opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale(0,1);
+	transform: scale(0,1);
+}
+
+.cards .card-text:hover:after {
+  opacity: 1;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
